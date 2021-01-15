@@ -1,0 +1,59 @@
+.plateDiv {
+    top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    /* box-shadow:  1px 1px 5px 0.5px rgb(173, 126, 140, 0.5); */
+    /* background: radial-gradient(circle at 400px 550px, rgb(206, 186, 186), rgb(107, 65, 71)); */
+    z-index: 1;
+}
+
+.lipDiv {
+    margin-bottom: 135px;
+    position: absolute;
+    height: 720px;
+    width: 720px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 350px 50px,rgb(206, 186, 186), rgb(107, 65, 71));
+    box-shadow:  3px 20px 20px 5px rgb(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.targetColorDiv {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 150px 150px, rgb(206, 186, 186), rgb(107, 65, 71));
+    color: rgba(5, 13, 133, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    z-index: 1;
+}
+
+.colorText {
+    position: absolute;
+    top: 115px;
+    right: 150px;
+    color: rgba(5, 13, 133);
+    font-size: 44px;
+    font-weight: bolder;
+}
+
+.colorNumber {
+    position: relative;
+    font-size: 40px;
+    color: rgba(5, 13, 133);
+    padding-bottom: 20px;
+    font-weight: bolder;
+}

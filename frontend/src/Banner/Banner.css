@@ -1,0 +1,44 @@
+.bannerDiv {
+    overflow: visible;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: rgba(5, 13, 133, 0.9);
+    font-family: 'Fontdiner Swanky';
+    background: linear-gradient( rgb(158, 126, 131) 0.5%, rgb(206, 186, 186) 99.5%);
+}
+
+.gameName {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 12px;
+    font-size: 60px;
+}
+
+@media only screen and (max-width: 900px) {
+    .gameName {
+        margin-top: 18px;
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .gameName {
+        margin-top: 28px;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .gameName {
+        visibility: hidden;
+    }
+}
+
+
+/* .userName {
+    position: absolute;
+    right: 106px;
+    top: 12px;
+    font-size: 22px;
+} */

@@ -1,0 +1,115 @@
+.bowlOutter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 250px;
+    z-index: 1;
+}
+
+#scoreBowl {
+    position: absolute;
+    left: -20px;
+}
+
+#coinBowl {
+    position: absolute;
+    right: -20px;
+}
+
+.bowl {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 5px;
+    height: 135px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    overflow: hidden;
+
+}
+
+.lowerHalf::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 90%;
+    height: 90%;
+    border-radius:50%;
+    background: radial-gradient(circle at 0% 20px, rgb(250, 230, 230), rgba(255, 255, 255, 0) 68%);
+    filter: blur(3px);
+    z-index: 2;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px;
+    width: 160px;
+    color: rgba(5, 13, 133, 0.9);
+    font-size: 60px;
+    font-family: 'Fontdiner Swanky';
+    z-index: 2;
+}
+
+.innerGold {
+    position: absolute;
+    top: 25px;
+    left: 13px;
+    width: 220px;
+    height: 50px;
+    background-image: url('../Images/gold.jpg');
+    background-size: cover;
+    background-size: 250% 250%;
+    animation: TransitioningBackground 11s linear infinite;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0px 5px 15px 5px rgb(187, 167, 52);
+}
+
+@keyframes TransitioningBackground {
+    0% {
+        background-position: 1% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    75% {
+        background-position: 99% 100%;
+    }
+    100% {
+        background-position: 1% 0%;
+    }
+}
+
+.lowerHalf {
+    position: absolute;
+    bottom: 40px;
+    height: 150px;
+    width: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 70px 100px, rgb(206, 186, 186), rgb(107, 65, 71));
+    z-index: 1;
+}
+
+.upperHalf {
+    position: absolute;
+    bottom: 120px;
+    left: 1px;
+    height: 35px;
+    width: 245px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 80px 60px, rgb(206, 186, 186), rgb(107, 65, 71));
+    border: 2px solid rgb(206, 186, 186);
+    z-index: 2;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+}

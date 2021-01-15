@@ -1,11 +1,15 @@
 
-
-// export function pickColor() {
-//     const random = Math.floor(Math.random() * colors.length);
-//     return colors[random];
-// }
 export function generateEasyColors() {
-    let arr = ["(0, 0, 0)", "(0, 0, 255)", "(255, 0, 255)", "(255, 255, 255)", "(0, 255, 255)", "(255, 0, 0)", "(0, 255, 0)", "(255, 255, 0)"];
+    let arr = [
+        "(0, 0, 0)",
+        "(0, 0, 255)",
+        "(255, 0, 255)",
+        "(255, 255, 255)",
+        "(0, 255, 255)",
+        "(255, 0, 0)",
+        "(0, 255, 0)",
+        "(255, 255, 0)"
+    ];
     let returnArr = []
 
     while (returnArr.length !== 6) {
@@ -14,17 +18,30 @@ export function generateEasyColors() {
             returnArr.push(arr[randomNum])
         }
     }
-    return returnArr
+
+    const newArray = addStyleString(returnArr)
+    return newArray
 }
 
-export function generateRandomColors() {
+function addStyleString (arr) {
+    const newArray = []
+    for (let i = 0; i < arr.length; i++) {
+        newArray.push({ background: `radial-gradient(circle at 100px 100px, rgb${arr[i]}, #000)` })
+    }
+
+    return newArray
+}
+
+export function generateHardColors() {
     //make an array
     const arr = [];
     for (let i = 0; i < 6; i++) {
         //get random color and push into array
         arr.push(randomColor());
     }
-    return (arr);
+
+    const newArray = addStyleString(arr);
+    return newArray;
 }
 
 function randomColor() {
