@@ -1,0 +1,119 @@
+.gameboardDiv {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    height: 150px;
+    width: 100%;
+}
+
+.cornerDiv {
+    z-index: 5;
+    position: absolute;
+    bottom: -135px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 105%;
+    width: 200%;
+    background-color: rgba(5, 13, 133, 0.9);
+    overflow: hidden;
+}
+
+.RBGgameBoard {
+    top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    box-shadow:  1px 1px 5px 0.5px rgb(173, 126, 140, 0.5);
+    background: radial-gradient(circle at 400px 600px, rgb(250, 230, 230), rgb(131, 96, 101));
+}
+
+.startTimerDiv {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 150px 150px, rgb(250, 230, 230), rgb(70, 10, 18));
+    color: rgba(5, 13, 133, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    z-index: 1;
+}
+
+.startTimer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    /* background-color: papayawhip; */
+    color: rgba(5, 13, 133, 0.9);
+    border-radius: 50%;
+    font-size: 120px;
+}
+
+.startTimerDiv::before {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    width: 102%;
+    height: 102%;
+    border-radius:50%;
+    background: radial-gradient(circle at 40% 80px, rgb(250, 230, 230), rgb(70, 10, 18) 190%);
+    filter: blur(3px);
+
+}
+
+
+.startButton {
+    height: 60px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    font-size: 35px;
+    box-shadow: 4px 5px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.colorText {
+    position: absolute;
+    top: 110px;
+    right: 175px;
+    color: rgba(5, 13, 133);
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.correct {
+    position: absolute;
+    bottom: 125px;
+    font-size: 40px;
+    color: rgba(5, 13, 133);
+}
+
+.colorNumber {
+    position: relative;
+    padding-top: 10px;
+    font-size: 40px;
+    color: rgba(5, 13, 133);
+    padding-bottom: 20px;
+    font-weight: bolder;
+}
