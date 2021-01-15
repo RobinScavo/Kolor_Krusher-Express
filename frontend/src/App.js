@@ -14,20 +14,21 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Route path ='/'>
-        <Controller />
-    </Route>
+    <>
+      {/* <Navigation isLoaded={isLoaded} />
+      {isLoaded && (
+        <Switch>
+          <Route path="/signup">
+            <SignupFormPage />
+          </Route>
+        </Switch>
+
+      )} */}
+      <Route path ='/'>
+          <Controller />
+      </Route>
+    </>
 )
 }
 
 export default App;
-
-{/* <Navigation isLoaded={isLoaded} />
-{isLoaded && (
-  <Switch>
-    <Route path="/signup">
-      <SignupFormPage />
-    </Route>
-  </Switch>
-
-)} */}

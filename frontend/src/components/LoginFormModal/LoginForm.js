@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+
+import './LogInFormModal.css'
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -19,33 +22,48 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
-        ))}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <div className='logInFormDiv'>
+      <form onSubmit={handleSubmit}>
+        <ul>
+          {errors.map((error, idx) => (
+            <li key={idx}>{error}</li>
+          ))}
+        </ul>
+        <label>
+          Username or Email
+          <input
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Password
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        <button type="submit">Log In</button>
+        <button className='signUpButton'>
+          <NavLink to="/signup">Sign Up</NavLink>
+        </button>
+        <button className='cancelButton'>
+        <ul>
+          <li>
+            <NavLink exact to="/">Home</NavLink>
+            {/* {isLoaded && sessionLinks} */}
+          </li>
+        </ul>
+        </button>
+      </form>
+    </div>
   );
 }
+
+
 
 export default LoginForm;

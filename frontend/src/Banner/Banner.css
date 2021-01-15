@@ -36,9 +36,14 @@
 }
 
 
-/* .userName {
+.userName {
     position: absolute;
-    right: 106px;
-    top: 12px;
+    right: 50px;
+    top: 16px;
     font-size: 22px;
-} */
+    color: rgb(109, 86, 90);
+}
+
+.userName:hover {
+    color: rgba(5, 13, 133, 0.9);
+}
