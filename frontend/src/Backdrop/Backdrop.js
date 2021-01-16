@@ -3,6 +3,7 @@ import React from 'react';
 import RGBboard from '../RGB/RGBboard'
 import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer'
+// import PreGameInstruction from '../Components/Instructions/pregame'
 
 
 import './Backdrop.css'

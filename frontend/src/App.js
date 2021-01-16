@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import SignupFormPage from "./Components/SignupFormPage";
+// import SignupFormPage from "./Components/SignupFormPage";
 import * as sessionActions from "./store/session";
-import Navigation from "./Components/Navigation";
+// import Navigation from "./Components/Navigation";
 import Controller from './Controller'
 
 function App() {

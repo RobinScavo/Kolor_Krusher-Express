@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import SignUpModal from './SignUpModal'
 
 import './LogInFormModal.css'
 
@@ -10,6 +11,7 @@ function LoginForm() {
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +25,8 @@ function LoginForm() {
 
   return (
     <div className='logInFormDiv'>
+      {showSignUpModal && <SignUpModal />}
+      <button className='signUpButton' onClick={() => setShowSignUpModal(true)}>Sign Up</button>
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
@@ -48,17 +52,17 @@ function LoginForm() {
           />
         </label>
         <button type="submit">Log In</button>
-        <button className='signUpButton'>
-          <NavLink to="/signup">Sign Up</NavLink>
-        </button>
-        <button className='cancelButton'>
-        <ul>
+
+          {/* <NavLink to="/signup">Sign Up</NavLink> */}
+
+
+        {/* <ul>
           <li>
             <NavLink exact to="/">Home</NavLink>
-            {/* {isLoaded && sessionLinks} */}
+            {isLoaded && sessionLinks}
           </li>
-        </ul>
-        </button>
+        </ul> */}
+
       </form>
     </div>
   );
