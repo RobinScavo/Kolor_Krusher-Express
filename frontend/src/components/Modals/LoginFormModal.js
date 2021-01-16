@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { NavLink } from 'react-router-dom';
-import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
-import SignUpModal from './SignUpModal'
+// import { NavLink } from 'react-router-dom';
+
+import * as sessionActions from "../../store/session";
+// import SignUpModal from './SignUpModal'
+import { Modal } from '../../ModalContext/Modal';
+import InstructionModal from './InstructionModal'
 
 import './LogInFormModal.css'
 
-function LoginForm() {
+function LoginForm(props) {
   const dispatch = useDispatch();
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  const [showSignUpModal, setShowSignUpModal] = useState(false);
+  // const [showSignUpModal, setShowSignUpModal] = useState(false);
+  const [showInstructionModal, setShowInstructionModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,8 +29,8 @@ function LoginForm() {
 
   return (
     <div className='logInFormDiv'>
-      {showSignUpModal && <SignUpModal />}
-      <button className='signUpButton' onClick={() => setShowSignUpModal(true)}>Sign Up</button>
+      {/* {showSignUpModal && <SignUpModal />}
+      <button className='signUpButton' onClick={() => setShowSignUpModal(true)}>Sign Up</button> */}
       <form onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => (
@@ -52,17 +56,12 @@ function LoginForm() {
           />
         </label>
         <button type="submit">Log In</button>
-
-          {/* <NavLink to="/signup">Sign Up</NavLink> */}
-
-
-        {/* <ul>
-          <li>
-            <NavLink exact to="/">Home</NavLink>
-            {isLoaded && sessionLinks}
-          </li>
-        </ul> */}
-
+        <button onClick={() => setShowInstructionModal(true)}>Back</button>
+          {showInstructionModal && (
+              <Modal >
+                  <InstructionModal closeModal={props.closeModal} />
+              </Modal>
+          )}
       </form>
     </div>
   );
