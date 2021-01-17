@@ -25,16 +25,17 @@ function LoginForm(props) {
   };
 
   return (
+    <>
     <div className='fullDiv'>
       <div className='logInFormDiv'>
+        <h1 className='logSignTitle'>LogIn</h1>
         <form className='form' onSubmit={handleSubmit}>
-          <ul>
+          {<ul>
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
             ))}
-          </ul>
-          <label className='label'>
-            Username or Email
+          </ul>}
+          <label className='label playerLabel'>Player Name
             <input
               type="text"
               value={credential}
@@ -42,29 +43,27 @@ function LoginForm(props) {
               required
             />
           </label>
-          <label className='label'>
-            Password
+          <label className='label passwordLabel'>Password
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-          </label>
-          <button type="submit">Log In</button>
-          <button onClick={() => {
-            values.toggleInstructionModal();
-            values.toggleLoginModal();
-          }}>Back</button>
+            </label>
+            <button className='logSignButton' type="submit">LogIn</button>
+              <button  className='backButton' onClick={() => {
+              values.toggleInstructionModal();
+              values.toggleLoginModal();
+            }}>Back</button>
         </form>
       </div>
       <div className='signUpFormDiv'>
         <SignUpForm />
       </div>
     </div>
-  );
+    </>
+  )
 }
-
-
 
 export default LoginForm;

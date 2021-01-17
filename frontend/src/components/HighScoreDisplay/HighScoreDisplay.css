@@ -18,7 +18,8 @@
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid rgba(5, 13, 133, 0.9);
-    height: 35px;
+    height: 36px;
+    background: linear-gradient( rgb(236, 224, 224) 0.5%,  rgb(212, 190, 194) 99.5%);
 }
 
 .highScoreText {
