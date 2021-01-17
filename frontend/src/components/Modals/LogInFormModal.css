@@ -1,5 +1,37 @@
+.fullDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
 .logInFormDiv {
-    /* height: 100px;
-    width: 100px; */
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: lightblue;
+}
+
+.signUpFormDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    background-color: lawngreen;
+}
+
+.label {
+    height: 30px;
+    background-color: lightcoral;
+}
+
+input {
+    height: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
 }

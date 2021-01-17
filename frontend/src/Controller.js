@@ -3,7 +3,9 @@ import React from 'react'
 import { generateHardColors, generateEasyColors } from './PureFunctions';
 import Backdrop from './Backdrop/Backdrop'
 import KarenContext from './KarenContext';
-
+import InstructionModal from './Components/Modals/InstructionModal';
+import LoginModal from './Components/Modals/LoginFormModal';
+import { Modal } from './ModalContext/Modal'
 
 class Controller extends React.Component {
     constructor (props) {
@@ -17,16 +19,23 @@ class Controller extends React.Component {
             round: 0,
             score: 0,
             timer: 15,
-            gameOn: false,
             coins: 0,
             coinArray: [true, true, true],
+            gameOn: false,
+            instructionModal: false,
+            loginModal: false,
 
             startGame: this.startGame,
             correctGuess: this.correctGuess,
             updateTimer: this.updateTimerContext,
             removeCoin: this.removeCoin,
+            toggleInstructionModal: this.toggleInstructionModal,
+            toggleLoginModal: this.toggleLoginModal,
         }
     }
+
+    toggleInstructionModal = () => this.setState({ instructionModal: !this.state.instructionModal })
+    toggleLoginModal = () => this.setState({ loginModal: !this.state.loginModal })
 
     startGame = () => {
         this.clearBoard();
@@ -123,11 +132,24 @@ class Controller extends React.Component {
             <div className='gameBoardDiv' value={this.state}>
                 <KarenContext.Provider value={this.state}>
                     <Backdrop />
+
+                    {this.state.instructionModal &&
+                        <Modal>
+                            <InstructionModal />
+                        </Modal>
+                    }
+
+                    {this.state.loginModal &&
+                        <Modal>
+                            <LoginModal />
+                        </Modal>
+                    }
                 </KarenContext.Provider>
             </div>
         )
     }
 }
+
 
 
 

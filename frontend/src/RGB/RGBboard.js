@@ -1,14 +1,18 @@
 import React, { useContext, useState } from 'react';
+
+
 import KarenContext from '../KarenContext'
 import { Modal } from '../ModalContext/Modal'
-
 import InstructionModel from '../Components/Modals/InstructionModal'
+import LoginModal from '../Components/Modals/LoginFormModal'
 import ColorBall from './ColorBall'
 
 import './RGBboard.css'
 
 const RGBboard = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [showInstructionModal, setShowInstructionModal] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
+
     const values = useContext(KarenContext)
     const arr = values.colorArray;
     const target = values.colorTargetId;
@@ -59,12 +63,26 @@ const RGBboard = () => {
 
                     {/* Start button */}
                     {!values.gameOn && values.round === 0 &&
-                        <button className='startButton' onClick={() => setShowModal(true)}>START</button>}
-                    {showModal && (
+                        <button className='startButton' onClick={() => {
+                            values.toggleInstructionModal()
+                        }}>START</button>}
+
+                    {/* Instruction Modal     */}
+                    {/* {showInstructionModal && (
                         <Modal >
-                            <InstructionModel closeModal={() => setShowModal(false)}/>
+                            <InstructionModel
+                                closeInstructionModal={() => setShowInstructionModal(false)}
+                                openLoginModal={() => setShowLoginModal(true)}
+                            />
                         </Modal>
-                    )}
+                    )} */}
+
+                    {/* Login/Signup Modal     */}
+                    {/* {showLoginModal && (
+                        <Modal >
+                            <InstructionModel closeInstructionModal={() => setShowInstructionModal(false)}/>
+                        </Modal>
+                    )} */}
 
                     {/* Target color */}
                     {values.gameOn &&

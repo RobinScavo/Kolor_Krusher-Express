@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useDispatch } from "react-redux";
-// import { NavLink } from 'react-router-dom';
 
 import * as sessionActions from "../../store/session";
-// import SignUpModal from './SignUpModal'
-import { Modal } from '../../ModalContext/Modal';
-import InstructionModal from './InstructionModal'
+import SignUpForm from '../../Components/SignupFormPage/SignUpFormPage'
+import KarenContext from '../../KarenContext'
 
 import './LogInFormModal.css'
 
 function LoginForm(props) {
+  const values = useContext(KarenContext)
   const dispatch = useDispatch();
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  // const [showSignUpModal, setShowSignUpModal] = useState(false);
-  const [showInstructionModal, setShowInstructionModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,41 +25,42 @@ function LoginForm(props) {
   };
 
   return (
-    <div className='logInFormDiv'>
-      {/* {showSignUpModal && <SignUpModal />}
-      <button className='signUpButton' onClick={() => setShowSignUpModal(true)}>Sign Up</button> */}
-      <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
-          ))}
-        </ul>
-        <label>
-          Username or Email
-          <input
-            type="text"
-            value={credential}
-            onChange={(e) => setCredential(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <button type="submit">Log In</button>
-        <button onClick={() => setShowInstructionModal(true)}>Back</button>
-          {showInstructionModal && (
-              <Modal >
-                  <InstructionModal closeModal={props.closeModal} />
-              </Modal>
-          )}
-      </form>
+    <div className='fullDiv'>
+      <div className='logInFormDiv'>
+        <form className='form' onSubmit={handleSubmit}>
+          <ul>
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
+          </ul>
+          <label className='label'>
+            Username or Email
+            <input
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              required
+            />
+          </label>
+          <label className='label'>
+            Password
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <button type="submit">Log In</button>
+          <button onClick={() => {
+            values.toggleInstructionModal();
+            values.toggleLoginModal();
+          }}>Back</button>
+        </form>
+      </div>
+      <div className='signUpFormDiv'>
+        <SignUpForm />
+      </div>
     </div>
   );
 }

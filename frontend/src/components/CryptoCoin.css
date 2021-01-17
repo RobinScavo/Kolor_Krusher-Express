@@ -43,7 +43,7 @@
     top:40px;
 }
 
-@keyframes TransitioningBackground {
+/* @keyframes TransitioningBackground {
     0% {
         background-position: 1% 0%;
     }
@@ -59,4 +59,4 @@
     100% {
         background-position: 1% 0%;
     }
-}
+} */

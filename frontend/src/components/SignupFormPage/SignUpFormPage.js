@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 
-import { Modal } from '../../ModalContext/Modal'
-import InstructionModel from '../Modals/InstructionModal'
 import * as sessionActions from "../../store/session";
 
 import './SignupForm.css'
 
-function SignupFormPage(props) {
+function SignupFormPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
@@ -16,7 +14,6 @@ function SignupFormPage(props) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  const [showInstructionModal, setShowInstructionModal] = useState(false);
 
   if (sessionUser) return <Redirect to="/" />;
 
@@ -74,16 +71,8 @@ function SignupFormPage(props) {
         />
       </label>
       <button type="submit">Sign Up</button>
-      <button onClick={() => setShowInstructionModal(true)}>Back</button>
-      {showInstructionModal && (
-          <Modal >
-              <InstructionModel closeModal={props.closeModal}/>
-          </Modal>
-      )}
     </form>
   );
 }
-
-// closeModal={() => setShowModal(false)}
 
 export default SignupFormPage;
