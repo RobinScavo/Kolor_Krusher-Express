@@ -1,0 +1,260 @@
+.fullBioDiv {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    color: rgba(5, 13, 133, 0.9);
+    font-family: 'Fraunces', serif;
+}
+
+.bioDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 100%;
+    /* background-color: tomato; */
+}
+
+.contactProjectDiv {
+    font-family: 'Fraunces', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 100%;
+    /* background-color: yellowgreen; */
+}
+
+.myPic {
+    /* margin-top: 8px; */
+    width: 90%;
+    height: 45%;
+    /* background-color: lawngreen; */
+    background-image: url('../../Images/newSunburn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bioTextDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    /* background-color: lightpink; */
+    color: rgba(5, 13, 133, 0.9);
+    font-family: 'Fraunces', serif;
+}
+
+.lowerBioDiv {
+    margin-bottom: 8px;
+}
+
+.contactText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8%;
+    width: 90%;
+    /* background-color: lightslategrey; */
+
+}
+
+.contactDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: 90%;
+    /* background-color: lime; */
+}
+
+.projectDiv {
+    display: flex;
+    height: 65%;
+    width: 95%;
+    /* background-color: maroon; */
+}
+
+.topText {
+    /* margin-top: 10px; */
+}
+
+.bioBackButton {
+    position: absolute;
+    right: 48px;
+    top: 40px;
+}
+
+/* .bioFancyDiv {
+    height: 20px;
+    width: 20px;
+    background-color: mediumpurple;
+} */
+
+.bioText {
+    /* display: flex; */
+    text-align: center;
+    height: 100%;
+    width: 85%;
+    /* background-color: mediumseagreen; */
+    font-size: 15px;
+}
+
+.bioFancyDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url('../../Images/gold.jpg');
+    background-size: cover;
+    background-size: 250% 250%;
+    overflow: hidden;
+    animation: TransitioningBackground 10s linear infinite;
+    color: rgba(5, 13, 133, 0.9);
+    border: 1px solid #503c11;
+    z-index: 1;
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    margin-right: 3px;
+}
+
+.krazyFont {
+    font-family: 'Fontdiner Swanky';
+}
+
+.linkedIn {
+    height: 55px;
+    width: 55px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-image: url('../../Images/linkedIn.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid rgba(5, 13, 133, 0.9);
+    box-sizing: border-box;
+    border-radius: 20%;
+}
+
+.gitHub {
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 55px;
+    width: 55px;
+    background-image: url('../../Images/github.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid rgba(5, 13, 133, 0.9);
+    box-sizing: border-box;
+    border-radius: 20%;
+}
+
+.bioBackButton {
+    position: absolute;
+    right: 220px;
+    top: 10px;
+    padding-top: 2px;
+    height: 35px;
+    width: 85px;
+    margin-left: 10px;
+    background-color: rgba(5, 13, 133, 0.9);
+    border-radius: 5%;
+    color:  rgb(206, 186, 186);
+    font-family: 'Fontdiner Swanky';
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sfsgDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color:#368a42;
+    font-size: 15px;
+    border: 6px solid  #ffc200;;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.sfsgLink {
+    height: 65px;
+    width: 130px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    background-image: url('../../Images/sfsg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.openBookLink {
+    height: 70px;
+    width: 180px;
+    background-image: url('../../Images/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.openBookDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(229, 229, 240, 0.9);
+    font-size: 15px;
+    text-align: center;
+    border: 6px solid  rgba(66, 66, 133, 0.9);
+    box-sizing: border-box;
+    color:  rgba(1, 5, 53, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sfsgSpan {
+    color: #ffc200;
+}
+
+.openBookSpan {
+    color: rgba(0, 168, 255, 0.7);
+}
+
+.openBookTextLink {
+    color: rgba(0, 168, 255, 0.7);
+    font-size: 19px;
+}
+.openBookTextLink:hover {
+    color: rgba(66, 66, 133, 0.9);
+}
+
+.sfsgTextLink {
+    color: #ffc200;
+    font-size: 18px;
+}
+.sfsgTextLink:hover {
+    color: whitesmoke;
+}
+
+.websiteLink {
+    font-size: 20px;
+}

@@ -137,3 +137,7 @@ input::placeholder {
     position: absolute;
     margin-top: 127px;
 }
+
+.playerPageButton {
+    position: absolute;
+}

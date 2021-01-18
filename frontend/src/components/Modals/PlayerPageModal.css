@@ -1,0 +1,140 @@
+.playerDiv {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-family: 'Fontdiner Swanky';
+    color:rgba(5, 13, 133, 0.9);
+    font-size: 30px;
+}
+
+.leftSideDiv {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+}
+
+.rightSideDiv {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.myBioLink {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 175px;
+    width: 275px;
+    left: 75px;
+    bottom: 10px;
+}
+
+.nameText {
+    font-size: 40px;
+    align-self: center;
+    height: 20%;
+}
+
+.bioText {
+    font-size: 20px;
+    font-family: 'Fraunces', serif;
+}
+
+.fancyDisplayDiv {
+    display: flex;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+.fancyDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-image: url('../../Images/gold.jpg');
+    background-size: cover;
+    background-size: 250% 250%;
+    overflow: hidden;
+    animation: TransitioningBackground 10s linear infinite;
+    color: rgba(5, 13, 133, 0.9);
+    border: 1px solid #503c11;
+    z-index: 1;
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+}
+
+.thisBackButton {
+    position: absolute;
+    right: 170px;
+    padding-top: 2px;
+    height: 35px;
+    width: 85px;
+    margin-left: 10px;
+    background-color: rgba(5, 13, 133, 0.9);
+    border-radius: 5%;
+    color:  rgb(206, 186, 186);
+    font-family: 'Fontdiner Swanky';
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+    font-size: 17px;
+    outline: none;
+}
+
+.thisBackButton:hover {
+    background-image: linear-gradient(270deg, rgb(182, 5, 58), rgb(5, 13, 133, 0.9));
+    background-size: 400% 400%;
+    animation: TransitioningBackground 10s ease infinite;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.yourDisplayText {
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.skoreText {
+    margin-bottom: 170px;
+}
+
+.koinText {
+    margin-top: 20px;
+}
+
+.monkeyPic {
+    height: 225px;
+    width: 95px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-image: url('../../Images/chimp.jpg');
+    border: 1px solid #503c11;
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    outline: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+}
+
+.monkeyPic:hover {
+    background: rgba(5, 13, 133, 0.9);
+    color: rgb(212, 190, 194)
+}

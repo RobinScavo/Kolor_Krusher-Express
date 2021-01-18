@@ -5,6 +5,8 @@ import Backdrop from './Backdrop/Backdrop'
 import KarenContext from './KarenContext';
 import InstructionModal from './Components/Modals/InstructionModal';
 import LoginModal from './Components/Modals/LoginFormModal';
+import PlayerPageModal from './Components/Modals/PlayerPageModal';
+import MyBioModal from './Components/Modals/MyBioModal';
 import { Modal } from './ModalContext/Modal'
 
 class Controller extends React.Component {
@@ -22,20 +24,32 @@ class Controller extends React.Component {
             coins: 0,
             coinArray: [true, true, true],
             gameOn: false,
+
             instructionModal: false,
             loginModal: false,
+            bioModal: false,
+            playerPageModal: false,
+
+            startZen: false,
+            startBattle: false,
+            startDemo: false,
 
             startGame: this.startGame,
             correctGuess: this.correctGuess,
             updateTimer: this.updateTimerContext,
             removeCoin: this.removeCoin,
+
             toggleInstructionModal: this.toggleInstructionModal,
             toggleLoginModal: this.toggleLoginModal,
+            toggleBioModal: this.toggleBioModal,
+            togglePlayerPageModal: this.togglePlayerPageModal,
         }
     }
 
     toggleInstructionModal = () => this.setState({ instructionModal: !this.state.instructionModal })
     toggleLoginModal = () => this.setState({ loginModal: !this.state.loginModal })
+    toggleBioModal = () => this.setState({ bioModal: !this.state.bioModal })
+    togglePlayerPageModal = () => this.setState({ playerPageModal: !this.state.playerPageModal })
 
     startGame = () => {
         this.clearBoard();
@@ -133,6 +147,7 @@ class Controller extends React.Component {
                 <KarenContext.Provider value={this.state}>
                     <Backdrop />
 
+                    {/* Modal Control */}
                     {this.state.instructionModal &&
                         <Modal>
                             <InstructionModal />
@@ -142,6 +157,18 @@ class Controller extends React.Component {
                     {this.state.loginModal &&
                         <Modal>
                             <LoginModal />
+                        </Modal>
+                    }
+
+                    {this.state.bioModal &&
+                        <Modal>
+                            <MyBioModal />
+                        </Modal>
+                    }
+
+                    {this.state.playerPageModal &&
+                        <Modal>
+                            <PlayerPageModal />
                         </Modal>
                     }
                 </KarenContext.Provider>

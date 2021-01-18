@@ -23,7 +23,7 @@ const HighScoreDisplay = () => {
 
     return (
         <div className='highScoreDiv'>
-            <h1 className='highScoreText'>High Scores</h1>
+            <h1 className='highScoreText'>High Skores</h1>
             <table className='highScoreTable'>
                 {data.map(user => (
                     <tr className='tableRow'>

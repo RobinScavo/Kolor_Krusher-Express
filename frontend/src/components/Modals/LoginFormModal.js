@@ -7,7 +7,7 @@ import KarenContext from '../../KarenContext'
 
 import './LogInFormModal.css'
 
-function LoginForm(props) {
+function LoginForm() {
   const values = useContext(KarenContext)
   const dispatch = useDispatch();
   const [credential, setCredential] = useState("");
@@ -61,6 +61,10 @@ function LoginForm(props) {
       <div className='signUpFormDiv'>
         <SignUpForm />
       </div>
+      <button className='playerPageButton' onClick={() => {
+        values.toggleLoginModal();
+        values.togglePlayerPageModal();
+      }}>Player Page</button>
     </div>
     </>
   )
