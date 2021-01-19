@@ -33,6 +33,16 @@
     padding-top: 5px;
 }
 
+.thisBioLink {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 175px;
+    width: 375px;
+    left: 45px;
+    bottom: -10px;
+}
+
 input {
     display: flex;
     text-align: center;
@@ -60,6 +70,17 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+}
+
+.loginForm {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -128,6 +149,15 @@ input::placeholder {
     font-size: 30px;
 }
 
+.logTitle {
+    margin-top: 22px;
+    margin-bottom: 6px;
+}
+
+.logInput {
+    margin-bottom: 10px;
+}
+
 .playerLabel {
     position: absolute;
     margin-top: 328x;
@@ -140,4 +170,14 @@ input::placeholder {
 
 .playerPageButton {
     position: absolute;
+}
+
+.thisDevText {
+    display: flex;
+    margin-left: 15px;
+}
+
+.arrowSpan {
+    transform: rotate(180deg);
+    margin-right: 3px;
 }

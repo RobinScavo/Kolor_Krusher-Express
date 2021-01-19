@@ -21,12 +21,11 @@ const PlayerPageModal = () => {
                     <div className='fancyDisplay'>498</div>
                 </div>
                 <div className='myBioLink'>
-                    {/* <h1 className='bioText'>Meet the developer!</h1> */}
                     <div className='monkeyPic' onClick={() => {
                         values.togglePlayerPageModal();
                         values.toggleBioModal();
                     }}>Bio Page</div>
-                    <h1 className='bioText'>Meet the developer!</h1>
+                    <h1 className='meetDevText'>Meet the developer!</h1>
                 </div>
             </div>
             <div className='rightSideDiv'>

@@ -44,6 +44,31 @@ export function generateHardColors() {
     return newArray;
 }
 
+const zenObject = {
+    1: "I've never known a thing in my life.",
+    2: "Nothing is something worth doing.",
+    3: "Sleep is the best meditation.",
+    4: "Everything has a crack in it, that's how the light gets in.",
+    5: "These mountains that you carry, you were only meant to climb.",
+    6: "Let go or be dragged.",
+    7: "Transcend the bullshit.",
+    8: "And when they played they really played. And when they worked they really worked.",
+    9: "Relax. Nothing is under control.",
+    10: "If you chase two rabbits, you catch none.",
+    11: "Don't be afraid to just sit and watch.",
+    12: "Become comfortable with not knowing.",
+    13: "Life begins where fear ends.",
+    14: "Don't curse the darkness, light a candle.",
+    15: "This will never come again.",
+    16: "Nothing is what I want.",
+    17: "I have lived with several Zen masters - all of them cats.",
+    18: "Matters of great concern should be treated lightly. Matters of small concerns should be treated seriously.",
+    19: "Obstacles don't block the path, they are the path.",
+
+}
+
+
+
 function randomColor() {
     //pick a "red" from 0 to 255
     const r = Math.floor(Math.random() * 256);

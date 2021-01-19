@@ -46,7 +46,7 @@ function InstructionModel(props) {
               <div className='buttonDiv'>
                 <h1 className='titleText'>Battle Mode</h1>
                 <button  className='goldButton battle' onClick={() => {
-                  props.closeModal();
+                  values.toggleInstructionModal();
                   values.startGame();
                 }}>Battle</button>
               </div>

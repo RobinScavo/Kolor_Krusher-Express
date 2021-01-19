@@ -153,19 +153,16 @@ class Controller extends React.Component {
                             <InstructionModal />
                         </Modal>
                     }
-
                     {this.state.loginModal &&
                         <Modal>
                             <LoginModal />
                         </Modal>
                     }
-
                     {this.state.bioModal &&
                         <Modal>
                             <MyBioModal />
                         </Modal>
                     }
-
                     {this.state.playerPageModal &&
                         <Modal>
                             <PlayerPageModal />

@@ -28,35 +28,42 @@ function LoginForm() {
     <>
     <div className='fullDiv'>
       <div className='logInFormDiv'>
-        <h1 className='logSignTitle'>LogIn</h1>
-        <form className='form' onSubmit={handleSubmit}>
+        <h1 className='logSignTitle logTitle'>LogIn</h1>
+        <form className='loginForm' onSubmit={handleSubmit}>
           {<ul>
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
             ))}
           </ul>}
-          <label className='label playerLabel'>Player Name
             <input
+              className='logInput'
+              placeholder='Player Name'
               type="text"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
               required
             />
-          </label>
-          <label className='label passwordLabel'>Password
             <input
+              className='logInput'
+              placeholder='Password'
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            </label>
             <button className='logSignButton' type="submit">LogIn</button>
               <button  className='backButton' onClick={() => {
               values.toggleInstructionModal();
               values.toggleLoginModal();
             }}>Back</button>
         </form>
+        <div className='thisBioLink'>
+            <div className='monkeyPic' onClick={() => {
+                values.toggleLoginModal();
+                values.toggleBioModal();
+            }}>Bio Page</div>
+            <h1 className='meetDevText thisDevText'><div className='arrowSpan'>➛</div>Meet the developer!</h1>
+        </div>
       </div>
       <div className='signUpFormDiv'>
         <SignUpForm />

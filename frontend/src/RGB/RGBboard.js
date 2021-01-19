@@ -1,18 +1,11 @@
-import React, { useContext, useState } from 'react';
-
+import React, { useContext} from 'react';
 
 import KarenContext from '../KarenContext'
-import { Modal } from '../ModalContext/Modal'
-import InstructionModel from '../Components/Modals/InstructionModal'
-import LoginModal from '../Components/Modals/LoginFormModal'
 import ColorBall from './ColorBall'
 
 import './RGBboard.css'
 
 const RGBboard = () => {
-    const [showInstructionModal, setShowInstructionModal] = useState(false);
-    const [showLoginModal, setShowLoginModal] = useState(false);
-
     const values = useContext(KarenContext)
     const arr = values.colorArray;
     const target = values.colorTargetId;
@@ -67,23 +60,6 @@ const RGBboard = () => {
                             values.toggleInstructionModal()
                         }}>START</button>}
 
-                    {/* Instruction Modal     */}
-                    {/* {showInstructionModal && (
-                        <Modal >
-                            <InstructionModel
-                                closeInstructionModal={() => setShowInstructionModal(false)}
-                                openLoginModal={() => setShowLoginModal(true)}
-                            />
-                        </Modal>
-                    )} */}
-
-                    {/* Login/Signup Modal     */}
-                    {/* {showLoginModal && (
-                        <Modal >
-                            <InstructionModel closeInstructionModal={() => setShowInstructionModal(false)}/>
-                        </Modal>
-                    )} */}
-
                     {/* Target color */}
                     {values.gameOn &&
                         <div className='targetDiv'>
@@ -101,17 +77,5 @@ const RGBboard = () => {
     )
 }
 
-// onClose={() => setShowModal(false)}
-
-// {/* <ColorBall id='colorOne' color={arr[0]} target={target} correctGuess={values.correctGuess} gameOn={values.gameOn} delay={0} removeCoin={values.removeCoin} visibility={visibility}/>
-// {console.log('one')}
-// <ColorBall id='colorTwo' color={arr[1]} target={target} correctGuess={values.correctGuess} gameOn={values.gameOn} delay={750} removeCoin={values.removeCoin} visibility={visibility}/>
-// {console.log('two')}
-// <ColorBall id='colorThree' color={arr[2]} target={target} correctGuess={values.correctGuess} gameOn={values.gameOn} delay={600} removeCoin={values.removeCoin} visibility={visibility}/>
-// {console.log('three')}
-// <ColorBall id='colorFour' color={arr[3]} target={target} correctGuess={values.correctGuess} gameOn={values.gameOn} delay={450} removeCoin={values.removeCoin} visibility={visibility}/>
-// {console.log('four')}
-// <ColorBall id='colorFive' color={arr[4]} target={target} correctGuess={values.correctGuess} gameOn={values.gameOn} delay={300} removeCoin={values.removeCoin} visibility={visibility}/>
-// {console.log('five')} */}
 
 export default RGBboard;
