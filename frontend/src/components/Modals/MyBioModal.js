@@ -23,9 +23,10 @@ const MyBioModal = () => {
                 <div className='bioTextDiv lowerBioDiv'>
                     <div className='bioFancyDiv'></div>
                     <div className='bioText'>
-                        The inspiration for <span className='krazyFont'>
-                        Kolor Krusher</span> came during a 14 day yoga and
-                        ayahuasca retreat in the Brazilian rainforest.
+                        When not building apps like<br/><span className='krazyFont'>
+                        Kolor Krusher</span> Robin can usually be found traveling.
+                        Visit his blog!<br/><br/><span className='blogLink'>
+                        Robin's Travel Blog</span>
                     </div>
                     <div className='bioFancyDiv'></div>
                 </div>

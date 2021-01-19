@@ -13,7 +13,6 @@
     justify-content: space-around;
     width: 40%;
     height: 100%;
-    /* background-color: tomato; */
 }
 
 .contactProjectDiv {
@@ -24,15 +23,12 @@
     justify-content: space-between;
     width: 60%;
     height: 100%;
-    /* background-color: yellowgreen; */
 }
 
 .myPic {
-    /* margin-top: 8px; */
     width: 90%;
     height: 45%;
-    /* background-color: lawngreen; */
-    background-image: url('../../Images/newSunburn.jpg');
+    background-image: url('../../Images/Atitlan.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,11 +40,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20%;
+    height: 26%;
     width: 100%;
-    /* background-color: lightpink; */
     color: rgba(5, 13, 133, 0.9);
     font-family: 'Fraunces', serif;
+    padding-left: 2px;
 }
 
 .lowerBioDiv {
@@ -61,8 +57,6 @@
     align-items: center;
     height: 8%;
     width: 90%;
-    /* background-color: lightslategrey; */
-
 }
 
 .contactDiv {
@@ -71,19 +65,14 @@
     justify-content: center;
     height: 15%;
     width: 90%;
-    /* background-color: lime; */
 }
 
 .projectDiv {
     display: flex;
     height: 65%;
     width: 95%;
-    /* background-color: maroon; */
 }
 
-.topText {
-    /* margin-top: 10px; */
-}
 
 .bioBackButton {
     position: absolute;
@@ -91,19 +80,13 @@
     top: 40px;
 }
 
-/* .bioFancyDiv {
-    height: 20px;
-    width: 20px;
-    background-color: mediumpurple;
-} */
-
 .bioText {
-    /* display: flex; */
     text-align: center;
     height: 100%;
     width: 85%;
-    /* background-color: mediumseagreen; */
     font-size: 15px;
+    margin-top: 20px;
+    line-height: 16px;
 }
 
 .bioFancyDiv {
@@ -121,9 +104,9 @@
     color: rgba(5, 13, 133, 0.9);
     border: 1px solid #503c11;
     z-index: 1;
-    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
-    margin-right: 3px;
+    margin-right: 5px;
 }
 
 .krazyFont {
@@ -178,12 +161,13 @@
 }
 
 .sfsgDiv {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    width: 50%;
+    height: 250px;
+    width: 230px;
     background-color:#368a42;
     font-size: 15px;
     border: 6px solid  #ffc200;;
@@ -215,12 +199,14 @@
 }
 
 .openBookDiv {
+    position: absolute;
+    right: 27px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    width: 50%;
+    height: 250px;
+    width: 230px;
     background-color: rgba(229, 229, 240, 0.9);
     font-size: 15px;
     text-align: center;
@@ -243,18 +229,54 @@
     color: rgba(0, 168, 255, 0.7);
     font-size: 19px;
 }
-.openBookTextLink:hover {
-    color: rgba(66, 66, 133, 0.9);
-}
 
 .sfsgTextLink {
     color: #ffc200;
     font-size: 18px;
 }
-.sfsgTextLink:hover {
-    color: whitesmoke;
-}
 
 .websiteLink {
     font-size: 20px;
+    position: absolute;
+}
+
+.blogLink{
+    font-size: 20px;
+}
+
+.websiteLink:hover, .blogLink:hover{
+    font-size: 21px;
+}
+
+.gitHub, .linkedIn {
+    position: absolute;
+}
+
+.gitHub {
+    right: 370px;
+}
+
+.linkedIn {
+    right: 80px;
+}
+
+.gitHub:hover, .linkedIn:hover {
+    height: 58px;
+    width: 58px;
+}
+
+.sfsgDiv:hover, .openBookDiv:hover {
+    /* height: 255px;
+    width: 235px; */
+    bottom: 15px;
+}
+
+.bioBackButton:hover {
+    background-image: linear-gradient(270deg, rgb(182, 5, 58), rgb(5, 13, 133, 0.9));
+    background-size: 400% 400%;
+    animation: TransitioningBackground 10s ease infinite;
+    transition: 0.6s;
+    cursor: pointer;
+    height: 37px;
+    width: 88px;
 }

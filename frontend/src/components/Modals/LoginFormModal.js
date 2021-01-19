@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { useDispatch } from "react-redux";
 
 import * as sessionActions from "../../store/session";
-import SignUpForm from '../../Components/SignupFormPage/SignUpFormPage'
+import SignUpForm from '../SignupFormPage/SignUpFormPage'
 import KarenContext from '../../KarenContext'
 
 import './LogInFormModal.css'
