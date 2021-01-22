@@ -40,6 +40,7 @@ const RGBboard = () => {
                 {/* Set the balls */}
                 {indexArray.map(index => (
                     <ColorBall
+                        key={idArray[index]}
                         id={idArray[index]}
                         color={arr[index]}
                         target={target}

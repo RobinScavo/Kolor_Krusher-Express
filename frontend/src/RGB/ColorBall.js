@@ -19,13 +19,8 @@ class ColorBall extends React.Component {
         }
     }
 
-    componentDidMount() {
-        console.log('mounted')
-    }
-
-    // componentWillUnmount() {
-    //     console.log('unmounted')
-    //     clearTimeout(this.timeout)
+    // componentDidMount() {
+    //     console.log('mounted')
     // }
 
     componentDidUpdate(prevProps) {
@@ -45,7 +40,6 @@ class ColorBall extends React.Component {
                 gameOn: this.props.gameOn
             })
         }
-        // this.componentWillUnmount();
     }
 
     checkGuess = (id) => {

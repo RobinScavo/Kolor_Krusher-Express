@@ -6,7 +6,7 @@ import KarenContext from '../../KarenContext'
 import './LogInFormModal.css'
 import './InstructionModel.css'
 
-function InstructionModel(props) {
+function InstructionModel() {
   const values = useContext(KarenContext)
 
   return (

@@ -19,22 +19,23 @@ const HighScoreDisplay = () => {
 
     ]
 
-    const coinShine = () => Math.floor((Math.random() * 12) + 9)
-
     return (
         <div className='highScoreDiv'>
             <h1 className='highScoreText'>High Skores</h1>
             <table className='highScoreTable'>
                 {data.map(user => (
-                    <tr className='tableRow'>
-                        <th className='rankColumn'>
-                            <div className='rankBling' style={{animation: 'TransitioningBackground 1s linear infinite;'}}>
-                                {user.rank}
-                            </div>
-                        </th>
-                        <th className='userColumn'>{user.name}</th>
-                        <th className='scoreColumn'>{user.score}</th>
-                    </tr>
+                    <tbody key={user.rank.toString()}>
+                        <tr className='tableRow' key={user.rank.toString()}>
+                            <th className='rankColumn' key={user.rank.toString()}>
+                                <div className='rankBling' key={user.rank.toString()}>
+                                    {user.rank}
+                                </div>
+                            </th>
+                            <th className='userColumn' key={user.name.toString()}>{user.name}</th>
+                            <th className='scoreColumn' key={user.score.toString()}>{user.score}</th>
+                        </tr>
+
+                    </tbody>
                 ))}
             </table>
         </div>

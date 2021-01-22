@@ -61,7 +61,6 @@ class Controller extends React.Component {
 
     removeCoin = () => {
         let tempArray = [];
-        console.log('first')
         if (this.state.coinArray[0]) {
             tempArray = [false, true, true]
         } else if (this.state.coinArray[1]) {
