@@ -14,7 +14,16 @@
     border: 1px solid #503c11;
     z-index: 1;
     box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    will-change: transform, opacity;
 }
+
+.cryptoCoinFlip {
+    -webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) ;
+    animation: flip-horizontal-bottom 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) ;
+}
+
+
 
 .cryptoOne {
     animation: TransitioningBackground 11s linear infinite;
